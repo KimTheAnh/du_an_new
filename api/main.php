@@ -4,9 +4,9 @@ session_start();
 require "../model/pdo.php";
 require "../model/product.php";
 require "../model/user.php";
-require "../model/bill.php";
 require "../global.php";
 
+include "view/header.php";
 
 if (isset($_GET['act'])) {
 
@@ -36,20 +36,20 @@ if (isset($_GET['act'])) {
         case "addCart":
             if ($_POST['id']) {
                 $cart = $_SESSION['cart'];
-                $qty = $_POST['qty'];
+                $qtt = $_POST['qtt'];
                 $id = $_POST['id'];
                 $add = 1;
                 foreach ($cart as $index => $item) {
                     if ($item['id'] == $id) {
                         $add = 0;
-                        $_SESSION['cart'][$index]['qty'] += $qty;
+                        $_SESSION['cart'][$index]['qtt'] += $qtt;
                         break;
                     }
                 }
                 if ($add == 1) {
                     $sp = [
                         'id' => $id,
-                        'qty' => $qty,
+                        'qtt' => $qtt,
                     ];
                     $_SESSION['cart'][] = $sp;
                 }
@@ -61,7 +61,7 @@ if (isset($_GET['act'])) {
             $listPro = [];
             foreach ($cart as $item) {
                 $id = $item['id'];
-                $qty = $item['qty'];
+                $qtt = $item['qtt'];
                 $pro = get_product($id);
                 $name = $pro['ten_san_pham'];
                 $img = explode(", ", $pro['anh_san_pham'])[0];
@@ -69,7 +69,7 @@ if (isset($_GET['act'])) {
                 $proLoad = [
                     'id' => $id,
                     "name" => $name,
-                    'qty' => $qty,
+                    'qtt' => $qtt,
                     'img' => $img,
                     'price' => $price,
                 ];
@@ -90,77 +90,37 @@ if (isset($_GET['act'])) {
             }
             break;
 
-        case "updateCart":
-            $_id = $_POST['id'];
-            $_qty = $_POST['qty'];
-            $_id = explode(",", $_id);
-            $_qty = explode(",", $_qty);
-            $cart = [];
-            $ms = [];
-            for ($i = 0; $i < count($_id); $i++) {
-                if ($_qty[$i] == 0) {
-                    $ms = ['error', 'Có sản phẩn chưa có số lượng xin vui lòng bổ xung'];
-                }
-                $sp = [
-                    'id' => $_id[$i],
-                    'qty' => $_qty[$i],
-                ];
-                $cart[] = $sp;
-            };
-            if ($ms == []) {
-                if ($_SESSION['cart'] == $cart) {
-                    $ms = ['error', 'Giỏ hàng chưa có thay đổi'];
-                } else {
-                    $ms = ['success', 'Giỏ hàng đã được cập nhật'];
-                    $_SESSION['cart'] = $cart;
-                }
+
+//            Use
+        case 'list_user':
+            if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
+                $kyw = $_POST['kyw'];
+            }else{
+                $kyw = "";
             }
-            echo_json($ms);
-
-            break;
-
-        case "login":
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            $user = get_user($email, $password);
-            if($user != []) {
-                $_SESSION['user'] = [
-                    "id" => $user['ma_khach_hang'],
-                    "name" => $user['ten_khach_hang'],
-                    "email" => $user['email'],
-                ];
-                echo_json(true);
-            } else {
-                echo_json(false);
+            if(isset($_GET['id'])&&($_GET['id']>0)){
+                $id = $_GET['id'];
+            }else{
+                $id =  0;
             }
+            $list_user = user_all($kyw, $id);
+            include 'admin/user/list.php';
             break;
+        case 'add_user':
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $ten_khach_hang = $_POST['ten_khach_hang'];
+                $so_dt = $_POST['so_dt'];
+                $email = $_POST['email'];
+                $chuc_nang = $_POST['chuc_nang'];
+                $mat_khau = $_POST['mat_Khau'];
+                $dia_chi = $_POST['dia_chi'];
 
-        case "logout":
-            unset($_SESSION['user']);
-            break;
-
-        case "register":
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            echo_json(add_user($email, $password));
-            break;
-
-        case "checkPassword":
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            $user = get_user($email, $password);
-            if($user != []) {
-                echo_json(true);
-            } else {
-                echo_json(false);
+                insert_user($ten_khach_hang, $so_dt,$email, $chuc_nang, $mat_khau,$dia_chi);
+                $thongbao = "Thêm thành công";
             }
-            break;
 
-        case "changeInfo":
-            $password = $_POST['password'];
-            $passwordNew = $_POST['passwordNew'];
-            $id = $_SESSION['user']['id'];
-            update_name_password_user($id, $name, $passwordNew);
+            $list_user = user_all("",0);
+            include 'admin/user/add.php';
             break;
 
         case "checkLogin":
@@ -196,5 +156,6 @@ if (isset($_GET['act'])) {
             echo_json($ma_don_hang);
         default:
     }
+    include "view/footer.php";
 } else {
 }

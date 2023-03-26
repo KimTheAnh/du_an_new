@@ -1,0 +1,87 @@
+.Content{
+    width: 1200px;
+}
+.xinchao{
+    margin-left: 50px;
+}
+span{
+    /*font-size: 30px;*/
+    /*color: rgb(242, 80, 80);*/
+    /*margin-left: 5px;*/
+}
+.a1{
+    margin: 12px 50px;
+}
+.container{
+    width: 1100px;
+    padding: 25px;
+    margin: 25px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(238, 246, 246);
+    margin-left: 5%;
+}
+
+
+
+:root {
+
+    /* Color */
+    --primary: #6C5DD3;
+    --white: #fff;
+    --text-color:#848788;
+
+    /* custom layout */
+
+    --header-width:255px;
+
+}
+
+.form-body {
+    display: flex;
+    gap:10px;
+}
+
+.form-label {
+    margin-bottom: 20px;
+}
+
+.form-label > input {
+    border: 1px solid #d7dae3;
+    outline: none;
+    width: 400px;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 20px;
+}
+.form-label > select{
+    border: 1px solid #d7dae3;
+    outline: none;
+    width: 400px;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.form-label > input:focus {
+    border-color: var(--primary);
+}
+
+.handel-add-customer {
+    border: none;
+    background-color: var(--primary);
+    font-size: 20px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    color: var(--white);
+    cursor: pointer;
+}
+.reset{
+    width: 100px;
+    margin-left: 10px;
+    background-color: aqua;
+    font-size: 15px;
+    padding: 15px;
+    border: none;
+    border-radius: 80px;
+}

@@ -155,13 +155,13 @@
 				<div class="header-mobile-fixed">
 					<!-- Shop -->
 					<div class="shop-page">
-						<a href="shop-grid-left.html"><i class="wpb-icon-shop"></i></a>
+						<a href="shop-grid-left.php"><i class="wpb-icon-shop"></i></a>
 					</div>
 
 					<!-- Login -->
 					<div class="my-account">
 						<div class="login-header">
-							<a href="page-my-account.html"><i class="wpb-icon-user"></i></a>
+							<a href="page-my-account.php"><i class="wpb-icon-user"></i></a>
 						</div>
 					</div>
 
@@ -473,31 +473,31 @@
 													<a href="#"><span class="menu-item-text">Pages</span></a>
 													<ul class="sub-menu">
 														<li>
-															<a href="page-login.html"><span class="menu-item-text">Login
+															<a href="page-login.php"><span class="menu-item-text">Login
 																	/ Register</span></a>
 														</li>
 														<li>
-															<a href="page-forgot-password.html"><span
+															<a href="page-forgot-password.php"><span
 																	class="menu-item-text">Forgot Password</span></a>
 														</li>
 														<li>
-															<a href="page-my-account.html"><span
+															<a href="page-my-account.php"><span
 																	class="menu-item-text">My Account</span></a>
 														</li>
 														<li>
-															<a href="page-about.html"><span class="menu-item-text">About
+															<a href="page-about.php"><span class="menu-item-text">About
 																	Us</span></a>
 														</li>
 														<li>
-															<a href="page-contact.html"><span
+															<a href="page-contact.php"><span
 																	class="menu-item-text">Contact</span></a>
 														</li>
 														<li>
-															<a href="page-faq.html"><span
+															<a href="page-faq.php"><span
 																	class="menu-item-text">FAQ</span></a>
 														</li>
 														<li>
-															<a href="page-404.html"><span class="menu-item-text">Page
+															<a href="page-404.php"><span class="menu-item-text">Page
 																	404</span></a>
 														</li>
 													</ul>

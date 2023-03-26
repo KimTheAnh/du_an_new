@@ -30,6 +30,10 @@
   <meta property="fb:admins" content="132951670226590">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:ital,wght@0,500;1,500&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" media="all" href="css/app.css">
+    <link rel="stylesheet" href="styles/left.css">
+    <link rel="stylesheet" href="styles/content.css">
+    <link rel="stylesheet" href="styles/list.css">
+    <script src="https://kit.fontawesome.com/db2d8b65e2.js" crossorigin="anonymous"></script>
   <script>
     var viewportmeta = document.querySelector('meta[name="viewport"]');
     if (viewportmeta) {
@@ -53,7 +57,7 @@
       });
     }
   </script>
-  <div class="page">
+  <div  class="page">
     <div class="sidebar">
       <div class="sidebar__top"><button class="sidebar__close"><svg class="icon icon-close">
             <use xlink:href="img/sprite.svg#icon-close"></use>
@@ -78,12 +82,12 @@
                       <use xlink:href="img/sprite.svg#icon-chart"></use>
                     </svg></div>
                   <div class="sidebar__text">Campaigns</div>
-                </a><a class="sidebar__item" href="schedules.html">
+                </a><a class="sidebar__item" href="index.php?act=list_user">
                   <div class="sidebar__icon"><svg class="icon icon-discovery">
                       <use xlink:href="img/sprite.svg#icon-discovery"></use>
                     </svg></div>
-                  <div class="sidebar__text">Schedules</div>
-                </a><a class="sidebar__item" href="payouts.html">
+                  <div class="sidebar__text"> Khach hang</div>
+                </a><a class="sidebar__item" href="index.php?act=list_user">
                   <div class="sidebar__icon"><svg class="icon icon-wallet">
                       <use xlink:href="img/sprite.svg#icon-wallet"></use>
                     </svg></div>

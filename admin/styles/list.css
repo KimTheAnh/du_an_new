@@ -1,0 +1,321 @@
+table > thead {
+    font-weight: bold;
+}
+table > tbody{
+    padding: 20px;
+}
+table{
+    margin-left: 20px;
+}
+
+.cot4{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 0fr));
+    display: flex;
+    gap: 24px;
+    height: 90px;
+   
+}
+.adc{
+    width: 240px;
+    height: 50px;
+    background-color: #e4e6f0;
+    border-radius: 22px ;
+    margin: auto;
+    font-weight: 300;
+    font-size: 19px;
+    font-family: 'Inter', sans-serif;
+    border: #e4e6f0;
+    margin-bottom: 6px;
+    
+}
+
+.adc:hover{
+    border:2px solid #6C5DD3 ;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+.add a:hover{
+    color: #6C5DD3;
+    border-radius: 22px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 240px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+} 
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    border-radius: 20px;
+}
+.right3{
+    width: 426px;
+    margin: 0px 30px;
+    
+}
+.cot22{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,0, 1fr));
+    display: flex;
+    gap: 21px;
+    margin: auto;
+    padding-top: 7px;
+}
+.handel-search{
+    border:none;
+    background-color: rgb(132, 126, 228);
+    color: white;
+    border-radius: 50px;
+}
+#id1{
+    width: 29px;
+    height: 29px;
+    padding: 0;
+}
+#id2{
+    width: 400px;
+    border-radius: 50px;
+    border: white;
+    font-size: 15px;
+    outline: none;
+    padding: 5px 15px;
+}
+.a{
+    width: 30px;
+    align-items: center;
+}
+.boxx{
+    position: absolute;
+	opacity: 0.8;
+	top: 0px;
+	left: 0px;
+	background: #FFF;
+	width: 1500px;
+	height: 100%;
+	z-index: 1;
+}
+.del{
+    position: absolute;
+    left: 500px;
+    top: 300px;
+    z-index: 2;
+    width: 500px;
+    background-color: rgb(229, 112, 112);
+    border: none;
+    border-radius: 50px;
+    padding: 0px 50px 20px 50px;
+}
+.box{
+    margin: auto;
+    border: none;
+    border-radius: 50px;
+}
+.box>input{
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    margin-left: 100px;
+    font-weight: bold;
+}
+.list_sp{
+    width: 60%;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    margin-right: 20px;
+}
+#chon{
+    width: 70px;
+    background-color: aqua;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 5px;
+}
+.cart1{
+    width: 230px;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    height: 50px;
+    padding-left: 10px;
+    text-decoration: none;
+}
+.hoadon{
+    width: 30%;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding-left: 20px; 
+    padding-bottom: 20px; 
+    margin-right: 20px;
+}
+.next{
+    width: 70px;
+    height: 30px;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    background-color: aqua;
+    margin-left: 100px;
+}
+
+.show-cart{
+    width: 60%;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    margin-right: 20px;
+}
+.table-body {
+    padding: 12px ;
+    background-color: #fff;
+    font-size: 20px;
+}
+
+.table-body > td {
+    background-color: #fff;
+    padding:  18px;
+}
+.pay-inform > input{
+    width: 300px;
+    border: 1px solid rgb(176, 176, 176);
+    padding: 10px;
+    border-radius: 20px;
+}
+.thanht{
+    width: 40%;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    margin-right: 20px; 
+}
+.cart-img{
+    width: 80px;
+    height:80px;
+    margin-right: 20px;
+}
+.name-item{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+p{
+    margin: 0px;
+    padding: 3px 0px;
+    box-sizing: border-box;
+}
+.price{
+    color: red;
+    font-weight: bold;
+}
+.xacnhan{
+    width: 100px;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    background-color: aqua;
+    border-radius: 20px;
+    margin-left: 200px;
+}
+.pad{
+    text-align: center;
+    padding: 5px 0px;
+}
+.list-chart{
+    width:1050px;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    margin-right: 20px; 
+    margin: auto;
+    margin-bottom: 20px;
+}   
+.list_tk{
+    margin: auto;
+    width: 1050px;
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    margin-right: 20px; 
+}
+.list-chart p{
+    padding: 15px;
+    margin-right: 20px;
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+}
+.list-chart p a{
+    text-decoration: none;
+    color: white;
+}
+.upd{
+    position: absolute;
+    left: 500px;
+    top: 70px;
+    z-index: 2;
+    width: 400px;
+    background-color: rgb(229, 112, 112);
+    border: none;
+    border-radius: 50px;
+    padding: 0px 50px 20px 50px;
+}
+.nhap input{
+    width: 300px;
+    margin-left: 50px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+}
+.nhap select{
+    width: 335px;
+    margin-left: 50px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+}
+.hidden{
+    width: 100px;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: blue;
+    color: white;
+}

@@ -1,0 +1,63 @@
+.flex{
+    display: flex;
+}
+.Top{
+    width: 255px;
+    height: 144px;
+    display:flex;
+    align-items:center;
+    padding-left: 30px;
+}
+.admin{
+    width: 255px;
+    font-family: 'Inter', sans-serif;
+    align-items:center;
+    padding-left: 30px;
+    font-weight: 600;
+    color: #808191;
+    font-size: 14px;
+
+}
+
+.left{
+    padding:10px ;
+    height: 100%;
+    width: 215px;
+    border-right: 1px solid red;
+}
+.icon{
+    padding-top: 7px;
+}
+
+svg{
+    padding-top: 5px;
+}
+
+ul li a {
+    text-decoration: none;
+}
+.Menu ul li a{
+    display: flex;
+    font-weight: 600;
+    height: 34px;
+    color: #808191;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    padding: 9px;
+
+}
+ul {
+    list-style: none;
+}
+.Menu svg{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.Menu ul li a:not(.is_active):hover{
+    background-color: #6C5DD3;
+    color: white;
+    border-radius: 10px ;
+
+}

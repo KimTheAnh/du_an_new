@@ -720,8 +720,6 @@ input[type=number] {
   padding-top: 5.25pt;
 }
 
-
-
 body i[class~=slick-arrow],
 body[class~=home] [class~=section] [class~=block-title][class~=title-underline] h2 {
   font-size: 1.25pc;
@@ -5595,7 +5593,7 @@ body i[class~=slick-arrow][class~=fa-angle-right] {
 
 .site-header,
 .site-navigation ul>li.level-0 .sub-menu {
-  z-index: 99;
+  z-index: 999999;
 }
 
 [class~=site-header][class~=header-v2] [class~=header-desktop],
