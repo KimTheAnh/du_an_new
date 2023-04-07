@@ -47,9 +47,9 @@
                         $update_user="index.php?act=update_user&id=".$ma_khach_hang;
                         $delete_user="index.php?act=delete_user&id=".$ma_khach_hang;
                         if($chuc_nang == 1 ){
-                            $vaitro = "Nhân viên";
+                            $chuc_nang = "Nhân viên";
                         }else if($chuc_nang ==2){
-                            $vaitro = "Khách hàng";
+                            $chuc_nang = "Khách hàng";
                         }
                         echo '
                             <tr>
@@ -59,7 +59,7 @@
                                 <td>'.$email.'</td>
                                 <td>'.$so_dt.'</td>
                                 <td>'.$dia_chi.'</td>
-                                <td>'.$vaitro.'</td>
+                                <td>'.$chuc_nang.'</td>
                                 <td class="flex">
                                     <a class="a" href="'.$update_user.'" style="margin-right:10px">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"

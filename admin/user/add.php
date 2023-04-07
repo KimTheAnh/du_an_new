@@ -11,7 +11,7 @@
                 </div>
 
                 <div class="form-label">
-                    <input type="text" name="mat_khau" placeholder="Mật khẩu">
+                    <input type="password" name="mat_khau" placeholder="Mật khẩu">
                 </div>
                 <div class="form-label">
                     <select name="chuc_nang" >
@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="form-label">
-                    <input type="number" name="so_dt" placeholder="Số điện thoại">
+                    <input type="tel" name="so_dt" placeholder="Số điện thoại">
                 </div>
 
                 <div class="form-label">

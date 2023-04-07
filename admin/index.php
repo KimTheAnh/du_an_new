@@ -16,7 +16,7 @@ if (isset($_GET['act'])) {
 
     switch ($act) {
             //            Use----------------------------------     //
-        case "list_user":
+        case 'list_user':
             if (isset($_POST['kyw']) && ($_POST['kyw'] != "")) {
                 $kyw = $_POST['kyw'];
             } else {
@@ -36,7 +36,7 @@ if (isset($_GET['act'])) {
                 $so_dt = $_POST['so_dt'];
                 $email = $_POST['email'];
                 $chuc_nang = $_POST['chuc_nang'];
-                $mat_khau = $_POST['mat_Khau'];
+                $mat_khau = $_POST['mat_khau'];
                 $dia_chi = $_POST['dia_chi'];
 
                 insert_user($ten_khach_hang, $so_dt, $email, $chuc_nang, $mat_khau, $dia_chi);
@@ -59,7 +59,7 @@ if (isset($_GET['act'])) {
                 $so_dt = $_POST['so_dt'];
                 $email = $_POST['email'];
                 $chuc_nang = $_POST['chuc_nang'];
-                $mat_khau = $_POST['mat_Khau'];
+                $mat_khau = $_POST['mat_khau'];
                 $dia_chi = $_POST['dia_chi'];
 
                 $update = update_user($id, $ten_khach_hang, $so_dt, $email, $chuc_nang, $mat_khau, $dia_chi);
@@ -83,6 +83,8 @@ if (isset($_GET['act'])) {
             $list_user = user_all("", 0);
             include 'user/list.php';
             break;
+
+
         case 'bill':
             include 'view/hoadon.php';
             break;
