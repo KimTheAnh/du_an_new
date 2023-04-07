@@ -6,6 +6,13 @@ function get_user($email, $password)
     return $user;
 }
 
+function get_user_admin($email, $password)
+{
+    $sql = "SELECT * FROM khach_hang WHERE khach_hang.email = '$email' AND khach_hang.mat_khau = '$password' AND khach_hang.chuc_nang = 1";
+    $user = pdo_query_one($sql);
+    return $user;
+}
+
 function get_user_id($id)
 {
     $sql = "SELECT * FROM khach_hang WHERE khach_hang.ma_khach_hang = $id";

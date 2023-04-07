@@ -44,5 +44,11 @@ function cmt_delete($id){
     $sql = "delete from binh_luan where ma_binh_luan=".$id ;
     pdo_execute($sql);
 }
+function count_cmt($id)
+{
+    $sql = "SELECT COUNT(binh_luan.ma_san_pham) as so_luong FROM binh_luan WHERE binh_luan.ma_san_pham = $id";
+    $so_luong = pdo_query_one($sql);
+    return $so_luong;
+}
 
 ?>

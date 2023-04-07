@@ -2,7 +2,7 @@
   <div class="page__center">
     <div class="page__row page__row_head">
       <div class="page__col">
-        <div class="page__hello h5">Hi Tam Tran,</div>
+        <div class="page__hello h5">Hi <?php echo $_SESSION['user_admin']['name'] ?>,</div>
         <div class="page__welcome h2">Welcome back<span class="desktop-hide">👋</span></div>
       </div>
       <div class="page__col">
