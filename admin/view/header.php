@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="styles/content.css">
   <link rel="stylesheet" href="styles/list.css">
   <link rel="stylesheet" href="css/toast.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 
   <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> -->
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
@@ -104,7 +104,7 @@
                       <use xlink:href="img/sprite.svg#icon-wallet"></use>
                     </svg></div>
                   <div class="sidebar__text">Binh Luan</div>
-                </a><a class="sidebar__item" href="statement.html">
+                </a><a class="sidebar__item" href="?act=bill">
                   <div class="sidebar__icon"><svg class="icon icon-document">
                       <use xlink:href="img/sprite.svg#icon-document"></use>
                     </svg></div>
@@ -145,12 +145,12 @@
                     <use xlink:href="img/sprite.svg#icon-profile"></use>
                   </svg></div>
                 <div class="sidebar__text">Profile</div>
-              </a><a class="sidebar__link" href="#">
+              </a><a class="sidebar__link" href="?act=logout_admin">
                 <div class="sidebar__icon"><svg class="icon icon-logout">
                     <use xlink:href="img/sprite.svg#icon-logout"></use>
                   </svg></div>
                 <div class="sidebar__text">Log out</div>
-              </a></div><a class="sidebar__user" href="#">
+              </a></div><a class="sidebar__user">
               <div class="sidebar__ava"><img class="sidebar__pic" src="img/ava.png" alt="" /></div>
               <div class="sidebar__desc">
                 <div class="sidebar__man">Tam Tran</div>

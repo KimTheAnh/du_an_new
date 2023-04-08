@@ -1,4 +1,3 @@
-<?php ob_start()  ?>
 <!DOCTYPE html>
 <html lang="en">
 <!-- Mirrored from caketheme.com/html/ruper/shop-grid-fullwidth.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 07 Mar 2023 01:20:23 GMT -->

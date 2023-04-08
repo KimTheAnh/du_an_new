@@ -6,6 +6,7 @@ require "model/user.php";
 require "model/bill.php";
 require "model/comment.php";
 require "global.php";
+ob_start();
 
 require "view/header.php";
 if (!isset($_SESSION['cart'])) {
@@ -22,8 +23,10 @@ if (isset($_GET['act'])) {
         case "shop-details":
             if (isset($_GET['id'])) {
                 $id = $_GET['id'];
+                flus_luot_xem($id);
                 $pro = get_product($id);
                 $listBinhLuan = get_list_cmt_product($id);
+                $so_luong_binh_luan = count_cmt($id)['so_luong'];
                 require "view/shop-details.php";
             } else {
                 require "view/page-404.php";

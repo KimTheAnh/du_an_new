@@ -154,8 +154,29 @@ if (isset($_GET['act'])) {
             }
             break;
 
+        case "loginAdmin":
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $user = get_user_admin($email, $password);
+            if($user != []) {
+                $_SESSION['user_admin'] = [
+                    "id" => $user['ma_khach_hang'],
+                    "name" => $user['ten_khach_hang'],
+                    "email" => $user['email'],
+                    "role" => $user['chuc_nang'],
+                ];
+                echo_json(true);
+            } else {
+                echo_json(false);
+            }
+            break;
+            
         case "logout":
             unset($_SESSION['user']);
+            break;
+
+        case "logout_admin":
+            unset($_SESSION['user_admin']);
             break;
 
         case "register":

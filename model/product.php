@@ -9,10 +9,7 @@ function get_list_product($st, $step)
 
 function get_product($id)
 {
-    $sql = "SELECT * FROM san_pham INNER JOIN ".
-    "(SELECT binh_luan.ma_san_pham, COUNT(binh_luan.ma_san_pham) ".
-    "as so_luong_binh_luan FROM binh_luan GROUP BY binh_luan.ma_san_pham) ".
-    "as a ON san_pham.ma_san_pham = a.ma_san_pham WHERE san_pham.ma_san_pham = $id ";
+    $sql = "SELECT * FROM san_pham WHERE san_pham.ma_san_pham = $id";
     $pro = pdo_query_one($sql);
     return $pro;
 }
@@ -59,4 +56,9 @@ function get_count_cate($ma_loai)
     $sql = "SELECT san_pham.ma_loai, COUNT(san_pham.ma_loai) as so_luong FROM san_pham WHERE san_pham.ma_loai = $ma_loai GROUP BY san_pham.ma_loai ";
     $so_luong = pdo_query_one($sql);
     return $so_luong['so_luong'];
+}
+
+function flus_luot_xem($id) {
+    $sql = "UPDATE `duan`.`san_pham` SET `luot_xem` = `luot_xem` + 1 WHERE san_pham.ma_san_pham = $id;";
+    pdo_execute($sql);
 }
