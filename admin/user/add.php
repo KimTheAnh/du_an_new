@@ -16,7 +16,7 @@
                 <div class="form-label">
                     <select name="chuc_nang" >
                         <option value="1">Nhân viên</option>
-                        <option value="2">Khách hàng</option>
+                        <option value="0">Khách hàng</option>
                     </select>
                 </div>
             </div>

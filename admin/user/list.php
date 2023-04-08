@@ -48,7 +48,7 @@
                         $delete_user="index.php?act=delete_user&id=".$ma_khach_hang;
                         if($chuc_nang == 1 ){
                             $chuc_nang = "Nhân viên";
-                        }else if($chuc_nang ==2){
+                        }else if($chuc_nang ==0){
                             $chuc_nang = "Khách hàng";
                         }
                         echo '
