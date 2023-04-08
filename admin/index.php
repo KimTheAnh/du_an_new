@@ -139,4 +139,5 @@ if (isset($_GET['act'])) {
 } else {
     include "view/home.php";
     include "view/footer.php";
+//    hihi
 }
